@@ -7,31 +7,33 @@
 
 <p> to view a task, put in your id and password it will take you to ur</p>
 <label> To Add your Secret to the Server!</label>
-<form action="/addTask" method="POST">
+<form action="/addPhrase" method="POST">
 <input type="text" placeholder="Phrase" id="phrase" name="phrase">
 <input type="text" placeholder="Phrase Password" id="phrasePassword" name="phrasePassword">
 <input type="text" placeholder="Phrase Id" id="phraseId" name="phraseId">
-<button type="answer">click?</button>
+<button type="answer">submit</button>
 </form>
 
 <label> To View Your Secret From the Server </label>
-<form action="/viewTask" method="POST">
+<form action="/viewPhrase" method="POST">
     <input type="text" placeholder="Phrase ID" id ="viewPhraseID" name="viewPhraseID">
     <input type="text" placeholder="Phrase Passwrod" id = "viewPhrasePassword" name="viewPhrasePassword">
+    <button type="answer">submit</button>
 </form>
 
 <label> To update your Secret to the Server!</label>
-<form action="/updateTask" method="POST">
+<form action="/updatePhrase" method="POST">
 <input type="text" placeholder="Updated Phrase" id="updatePhrase" name="updatePhrase">
 <input type="text" placeholder="Phrase Password" id="updatePhrasePassword" name="updatePhrasePassword">
 <input type="text" placeholder="Phrase Id" id="updatePhraseId" name="updatePhraseId">
-<button type="answer">click?</button>
+<button type="answer">submit</button>
 </form>
 
 <label> To Delete Your Secret From the Server </label>
-<form action="/deleteTask" method="POST">
+<form action="/deletePhrase" method="POST">
     <input type="text" placeholder="Phrase ID" id ="deletePhraseID" name="deletePhraseID">
     <input type="text" placeholder="Phrase Passwrod" id = "deletePhrasePassword" name="deletePhrasePassword">
+    <button type="answer">submit</button>
 </form>
 
 </body>
