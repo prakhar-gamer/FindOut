@@ -2,17 +2,37 @@
 <html>
 <body>
 
-<h1> Exclusive task! </h1>
-<p> enter your task, put in your password, then enter a ID</p>
+<h1> Exclusive secret! </h1>
+<p> enter your secret, put in your password, then enter a ID, NOTE u can only change your secret not ur ID or password so Dont Forget!</p>
 
 <p> to view a task, put in your id and password it will take you to ur</p>
-<audio controls>
-    <source src="/audio/speech.mp3" type="audio/mpeg"> its not working
-</audio>
-<label for="passcode"> ???</label>
-<form action="/check1" method="POST">
-<input type="text" id="pass1" name="pass1">
+<label> To Add your Secret to the Server!</label>
+<form action="/addTask" method="POST">
+<input type="text" placeholder="Phrase" id="phrase" name="phrase">
+<input type="text" placeholder="Phrase Password" id="phrasePassword" name="phrasePassword">
+<input type="text" placeholder="Phrase Id" id="phraseId" name="phraseId">
 <button type="answer">click?</button>
 </form>
+
+<label> To View Your Secret From the Server </label>
+<form action="/viewTask" method="POST">
+    <input type="text" placeholder="Phrase ID" id ="viewPhraseID" name="viewPhraseID">
+    <input type="text" placeholder="Phrase Passwrod" id = "viewPhrasePassword" name="viewPhrasePassword">
+</form>
+
+<label> To update your Secret to the Server!</label>
+<form action="/updateTask" method="POST">
+<input type="text" placeholder="Updated Phrase" id="updatePhrase" name="updatePhrase">
+<input type="text" placeholder="Phrase Password" id="updatePhrasePassword" name="updatePhrasePassword">
+<input type="text" placeholder="Phrase Id" id="updatePhraseId" name="updatePhraseId">
+<button type="answer">click?</button>
+</form>
+
+<label> To Delete Your Secret From the Server </label>
+<form action="/deleteTask" method="POST">
+    <input type="text" placeholder="Phrase ID" id ="deletePhraseID" name="deletePhraseID">
+    <input type="text" placeholder="Phrase Passwrod" id = "deletePhrasePassword" name="deletePhrasePassword">
+</form>
+
 </body>
 </html>
