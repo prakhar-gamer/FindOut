@@ -1,5 +1,7 @@
-from flask import Flask, render_template, send_from_directory, redirect, request
+from flask import Flask, render_template, send_from_directory, redirect, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+import requests
+import random
 
 app = Flask(__name__)
  
@@ -108,6 +110,18 @@ def deletePhrase():
     else:
         return "incorect password for id"
     
+@app.route("/getRandomPokemon", methods=['POST'])
+def getRandomPokemon():
+    randNum= random.randint(1,400)
+    url = f'https://pokeapi.co/api/v2/pokemon/{randNum}'
+    pokemon = requests.get(url)
 
+    if pokemon.ok:
+        data = pokemon.json()
+        pokemon_name= data.get('name')
+        return pokemon_name
+    else: 
+        return " api error :()"
+    
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True);

@@ -1,0 +1,28 @@
+body {
+    background-color: aquamarine;
+}
+h1 {
+    text-align: center;
+}
+audio {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+label {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+input {
+    display: block;
+    margin: 3px auto;
+}
+button {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+}
+p {
+    text-align: center;
+}

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Funny Flask App</title>
+    </head>
 <body>
 
 <h1> Exclusive secret! </h1>
-<p> enter your secret, put in your password, then enter a ID, NOTE u can only change your secret not ur ID or password so Dont Forget!</p>
-
-<p> to view a task, put in your id and password it will take you to ur</p>
+<p> enter your secret, put in your password, then enter a ID (ONLY NUMBERS!), NOTE u can only change your secret not ur ID or password so Dont Forget!</p>
 <label> To Add your Secret to the Server!</label>
 <form action="/addPhrase" method="POST">
 <input type="text" placeholder="Phrase" id="phrase" name="phrase">
@@ -36,5 +39,9 @@
     <button type="answer">submit</button>
 </form>
 
+<label class="Api"> Click the button the get a random pokemon back!</label>
+<form action="/getRandomPokemon" method="POST">
+    <button type="answer"> Generate!</button>
+</form>
 </body>
 </html>
