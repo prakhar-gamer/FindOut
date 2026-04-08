@@ -2,11 +2,12 @@ from flask import Flask, render_template, send_from_directory, redirect, request
 from flask_sqlalchemy import SQLAlchemy
 import requests
 import random
+import os
 
 app = Flask(__name__)
  
 #makes the database so we cna implemt CRUD into the Phrase
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' +os.path.join('/tmp', 'users.db')
 db = SQLAlchemy(app)
 
 class Phrase(db.Model):
