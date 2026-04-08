@@ -35,7 +35,7 @@ def index():
 
 @app.route("/audio/speech.mp3")
 def getAudio():
-    return send_from_directory("audio", "speech.mp3")
+    return send_from_directory("static/audio", "speech.mp3")
 
 @app.route("/DudeYourAGenius")
 #Allows you to make a account and update it to crude
